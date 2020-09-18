@@ -1,14 +1,16 @@
 <div class="container rounded">
-    <h1>EAT THAT BURGER</h1>
+    
+    
+    <h1 class="text-center">EAT THAT BURGER</h1>
 
     <div class="row justify-content-center">
-        <div class="card text-center col-4">
+        <div class="card text-center col-4 m-2 p-4 ">
             <h4 class="card-title">Which Burger would you like to eat?</h3>
                 <ul>
                     {{#each burgers}}
                     {{#unless devoured}}
                     <p>{{burger_name}}
-                        <button type="submit" class="devour" data-id="{{this.id}}">Devour</button>
+                        <button type="submit" class="devour btn btn-outline-danger" data-id="{{id}}">Devour</button>
                     </p>
                     {{/unless}}
                     {{/each}}
@@ -16,7 +18,7 @@
         </div>
 
 
-        <div class="card text-center col-4">
+        <div class="card text-center col-4 m-2 p-4">
             <h3>Eaten Burgers</h3>
             <ul>
                 {{#each burgers}}
@@ -30,7 +32,7 @@
     </div>
 
     <div class="row justify-content-center">
-        <div class="card text-center col-6">
+        <div class="card text-center col-6 m-2 p-4">
             <h2 class="card-title">Add a Burger</h2>
             <form class="create-form">
 
@@ -38,7 +40,7 @@
                     <label for="ca">Burger Name:</label>
                     <input type="text" id="createburger" name="name">
                 </div>
-                <button class="rounded" type="submit">Add Burger</button>
+                <button class="rounded  btn  btn-outline-danger" type="submit">Add Burger</button>
             </form>
         </div>
     </div>

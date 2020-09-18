@@ -1,21 +1,21 @@
 $(() =>{
     $(".devour").on("click", (event) => {
       event.preventDefault()
-      console.log("clicked devour")
+      console.log("devoured")
       let id = $(this).data("id");
-      let eat = $(this).data("eat");
+      let eaten = $(this).data("eaten");
   
-      eat = {
+      eaten = {
         devoured: true
       };
   
  // Sends the update request to devour the burger
       $.ajax("/api/burger/" + id, {
         type: "PUT",
-        data: eat
+        data: eaten
       }).then(
         () => {
-          console.log("burger is now devoured", eat);
+          console.log("devoured", eaten);
           // Reloads the page to update the view
           location.reload();
         }

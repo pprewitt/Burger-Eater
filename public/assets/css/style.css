@@ -1,0 +1,9 @@
+body {
+    background-image: url(/assets/img/Realistic\ Fast\ Food.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card{
+    background-color: rgba(245, 245, 245, 1);
+    opacity: .9;
+}
