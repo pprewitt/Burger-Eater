@@ -10,7 +10,7 @@ $(() =>{
       };
   
  // Sends the update request to devour the burger
-      $.ajax("/api/burgers/" + id, {
+      $.ajax("/api/burger/" + id, {
         type: "PUT",
         data: eat
       }).then(
@@ -27,12 +27,12 @@ $(() =>{
       event.preventDefault();
       console.log("clicked")
   
-      let newBurger = {name: $("#ca").val().trim(),
+      let newBurger = {name: $("#createburger").val().trim(),
         
       };
   
       // Send the POST request.
-      $.ajax("/api/burgers", {
+      $.ajax("/api/burger", {
         type: "POST",
         data: newBurger
       }).then(

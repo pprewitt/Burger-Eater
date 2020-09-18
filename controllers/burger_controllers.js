@@ -16,7 +16,7 @@ router.get("/", (req, res) => {
 });
 
 //create route to add a burger to the 'not' devoured list
-router.post("/api/burgers", (req, res) => {
+router.post("/api/burger", (req, res) => {
   console.log(req.body)
   burger.create([
     "burger_name", "devoured"
@@ -29,7 +29,7 @@ router.post("/api/burgers", (req, res) => {
 });
 
 //create route to update the burger to be devoured if the user clicks on the button
-router.put("/api/burgers/:id", (req, res) => {
+router.put("/api/burger/:id", (req, res) => {
   let condition = "id = " + req.params.id;
 
   // console.log("condition", condition);

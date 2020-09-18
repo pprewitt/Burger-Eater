@@ -10,7 +10,7 @@ const burger = {
 
     //add a new burger into the to be eaten pile
     create: function (cols, vals, cb) {
-      orm.create(["burgers", "devoured"],[req.body.name, req.body.devoured], function (res)  {
+      orm.create("burgers", cols, vals, function (res)  {
         cb(res);
       });
     },
