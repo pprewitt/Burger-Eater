@@ -6,7 +6,7 @@ const router = express.Router();
 // Create all our routes and set up logic within those routes where required.
 //create route to display all the burgers using handlebars
 router.get("/", (req, res) => {
-  burger.selectAll((data) => {
+  burger.all((data) => {
     let object = {
       burgers: data
     };
@@ -18,7 +18,7 @@ router.get("/", (req, res) => {
 //create route to add a burger to the 'not' devoured list
 router.post("/api/burgers", (req, res) => {
   console.log(req.body)
-  burger.insertOne([
+  burger.create([
     "burger_name", "devoured"
   ], [
     req.body.name, false
@@ -34,7 +34,7 @@ router.put("/api/burgers/:id", (req, res) => {
 
   // console.log("condition", condition);
 
-  burger.updateOne({
+  burger.update({
     devoured: req.body.devoured
   }, condition, (result) => {
     if (result.changedRows == 0) {
