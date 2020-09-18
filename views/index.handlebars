@@ -1,0 +1,45 @@
+<div class="container rounded">
+    <h1>EAT THAT BURGER</h1>
+
+    <div class="row justify-content-center">
+        <div class="card text-center col-4">
+            <h4 class="card-title">Which Burger would you like to eat?</h3>
+                <ul>
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                    <p>{{burger_name}}
+                        <button type="submit" class="devour" data-id="{{id}}">Devour</button>
+                    </p>
+                    {{/unless}}
+                    {{/each}}
+                </ul>
+        </div>
+
+
+        <div class="card text-center col-4">
+            <h3>Eaten Burgers</h3>
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                <p>{{burger_name}}</p>
+
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="card text-center col-6">
+            <h2 class="card-title">Add a Burger</h2>
+            <form class="create-form">
+
+                <div class="form-group">
+                    <label for="ca">Burger Name:</label>
+                    <input type="text" id="createburger" name="name">
+                </div>
+                <button class="rounded" type="submit">Add Burger</button>
+            </form>
+        </div>
+    </div>
+</div>
