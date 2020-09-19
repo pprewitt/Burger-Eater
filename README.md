@@ -24,7 +24,7 @@
   
  
 ## Installation 
- If you fork/clone the repo, you can start the server with command "node server.js" and then navigate to localhost:8080 in your browser. This app is deployed on heroku at:  
+ If you fork/clone the repo, you can start the server with command "node server.js" and then navigate to localhost:8080 in your browser. This app is deployed on heroku at: [EAT THAT BURGER](https://floating-bayou-58848.herokuapp.com/)  
   
  
 ## Usage 
