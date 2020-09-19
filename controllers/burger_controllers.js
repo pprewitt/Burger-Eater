@@ -7,11 +7,13 @@ const router = express.Router();
 //create route to display all the burgers using handlebars
 router.get("/", (req, res) => {
   burger.all(function(data) {
+    console.log(data)
     let object = {
       burgers: data
     };
     // console.log(hbsObject);
     res.render("index", object);
+
   });
 });
 

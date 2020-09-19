@@ -1,11 +1,11 @@
-$(() =>{
-    $(".devour").on("click", (event) => {
+
+    $(".devour").on("click", function (event) {
       event.preventDefault()
       console.log("devoured")
-      let id = $(this).data("id");
-      let eaten = $(this).data("eaten");
-  
-      eaten = {
+      let id = event.target.dataset.id;
+    // console.log(this.dataset);
+      console.log(id)
+      const eaten = {
         devoured: true
       };
   
@@ -43,5 +43,5 @@ $(() =>{
         }
       );
     });
-  });
+  
   

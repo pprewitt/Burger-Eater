@@ -27,6 +27,7 @@ function printQuestionMarks(num) {
         arr.push(key + "=" + value);
       }
     }
+    return arr.toString();
 }
 
 var orm = {
@@ -68,8 +69,8 @@ var orm = {
       queryString += " WHERE ";
       queryString += condition;
   
-      console.log(queryString);
-      connection.query(queryString, function(err, res) {
+      console.log(objColVals);
+      connection.query(queryString, function(err, result) {
         if (err) {
           throw err;
         }
