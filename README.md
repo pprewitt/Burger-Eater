@@ -43,7 +43,7 @@
  Feel free to send me suggestions at my contact info below.  
  
  ## Screenshot
-![screenshot](BurgerDemo.gif?raw=true)
+![screenshot](../public/assets/img/BurgerDemo.gif?raw=true)
   
  
 ## Tests 
